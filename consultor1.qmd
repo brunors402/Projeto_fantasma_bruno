@@ -10,6 +10,7 @@ source("rdocs/consultor1.R")
 
 # Objetivo
 
+
 # Análises
 
 ## Análise 1 - Evolução da Receita Média das Lojas (1880 – 1889)

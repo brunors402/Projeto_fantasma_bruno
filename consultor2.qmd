@@ -21,23 +21,35 @@ tinytex::install_tinytex()
 ```
 
 # Objetivo
-
-Esse template foi criado para o alocado conseguir observar como ficaria sua análise o arquivo principal. É daqui que o gerente de projetos irá copiar a análise e inserir no documento principal que gerará o relatório estatístico.
+Nesta entrega, apresentamos duas análises descritivas fundamentais para compreensão do perfil dos clientes e uma análise inferencial para entender a relação entre altura e peso.
 
 # Análises
 
 ## Análise 3
+O boxplot evidencia que há variação relevante dentro de ambos os grupos, indicando que o poder aquisitivo dos clientes não é uniforme.
+```{r}
+
+#| label: fig-grafico2
+#| fig-cap: "Distribuição da renda anual segundo o sexo dos clientes"
+grafico2
+
+```
+Esses resultados sugerem uma potencial desigualdade de renda entre os sexos, com homens ganhando mais em média. Contudo, a presença de outliers extremos indica um mercado com clientes de alto poder financeiro, que podem influenciar estratégias comerciais mais segmentadas para consumo premium.
+
+
 
 ## Análise 4
+A análise teve como objetivo investigar a relação entre a altura (em centímetros) e o peso (em quilogramas) dos clientes utilizando um gráfico de dispersão com linha de regressão. Visualmente, observa-se que, à medida que a altura aumenta, o peso tende também a aumentar, o que sugere uma relação positiva entre as variáveis.
 
 ```{r}
-#| label: fig-
-#| fig-cap: "Gráfico "
+#| label: fig-grafico3
+#| fig-cap: "Relação entre altura e peso dos clientes"
+grafico3
 
 
 
 ```
-
+Os resultados sugerem uma potencial desigualdade de renda entre os sexos, com homens ganhando mais em média. Contudo, a presença de outliers extremos indica um mercado com clientes de alto poder financeiro, que podem influenciar estratégias comerciais mais segmentadas para consumo premium.
 
 ::: {#quad- layout-align="center" quad-pos="H"}
 ```{=latex}

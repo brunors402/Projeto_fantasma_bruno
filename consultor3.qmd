@@ -1,45 +1,30 @@
 ---
 # Nome do arquivo PDF gerado na pasta resultado
-output-file: "Nome do alocado - análise 5 e 6"
+output-file: "Entrega 3"
 ---
 
 ```{r setup}
-source("rdocs/source/consultor3.R")
+#| include: false
+source("rdocs/consultor3.R")
 ```
-
-```{r}
-# Rodar apenas uma vez na vida!
-## Instalando o tinytex(pacote apenas)
-### CRAN version
-install.packages('tinytex')
-
-
-## Baixando o tinytex
-library(tinytex)
-tinytex::install_tinytex()
-```
-
 
 
 
 # Objetivo
 
-Esse template foi criado para o alocado conseguir observar como ficaria sua análise o arquivo principal. É daqui que o gerente de projetos irá copiar a análise e inserir no documento principal que gerará o relatório estatístico.
+Esta análise tem como objetivo comparar o perfil de idade dos clientes da cidade de Âmbar Seco, avaliando as diferenças entre as lojas da região. Espera-se identificar se alguma loja tem um perfil significativamente mais jovem ou mais velho, o que pode auxiliar em futuras estratégias comerciais.
 
 # Análises
 
-## Análise 5
+## Análise 4 - Idade dos clientes de Âmbar Seco por loja
 
-## Análise 6
-
+A visualização selecionada foi o boxplot, pois permite comparar a distribuição das idades entre as lojas, observar mediana, dispersão e possíveis outliers.
 ```{r}
-#| label: fig-
-#| fig-cap: "Gráfico "
-
-
+#| label: fig-grafico4
+#| fig-cap: "Distribuição da idade dos clientes por loja em Âmbar Seco "
 
 ```
-
+A partir da Figura \ref{fig-grafico4}, observa-se que as lojas da cidade de Âmbar Seco apresentam diferenças relevantes no perfil etário de seus clientes. Em todas as lojas, a mediana de idade se concentra principalmente entre 30 e 40 anos, indicando um público adulto consolidado economicamente — algo coerente com um comércio de produtos do faroeste.
 
 ::: {#quad- layout-align="center" quad-pos="H"}
 ```{=latex}
