@@ -1,24 +1,13 @@
 ---
-# Nome do arquivo PDF gerado na pasta resultado
-output-file: "Nome do alocado - análise 3 e 4"
+output-file: "Entrega 2 - Variação Peso por Altura"
 ---
-
 ```{r setup}
-source("rdocs/source/consultor2.R")
+#| include: false
+source("rdocs/consultor2.R")
 ```
 
 
-```{r}
-# Rodar apenas uma vez na vida!
-## Instalando o tinytex(pacote apenas)
-### CRAN version
-install.packages('tinytex')
 
-
-## Baixando o tinytex
-library(tinytex)
-tinytex::install_tinytex()
-```
 
 # Objetivo
 Nesta entrega, apresentamos duas análises descritivas fundamentais para compreensão do perfil dos clientes e uma análise inferencial para entender a relação entre altura e peso.

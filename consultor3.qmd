@@ -1,6 +1,5 @@
 ---
-# Nome do arquivo PDF gerado na pasta resultado
-output-file: "Entrega 3"
+output-file: "Entrega 3 - Idade dos clientes de Âmbar Seco a depender da loja"
 ---
 
 ```{r setup}

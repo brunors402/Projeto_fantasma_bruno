@@ -1,4 +1,5 @@
-source("rdocs/source/packages.R")
+source("rdocs/packages.R")
+
 
 # ---------------------------------------------------------------------------- #
 
@@ -25,7 +26,7 @@ source("rdocs/source/packages.R")
 source("packages.R") 
 
 
-arquivo <- "dados/relatorio_old_town_road.xlsx"  
+arquivo <- "relatorio_old_town_road.xlsx"  
 
 clientes <- read_excel(arquivo, sheet = "infos_clientes")
 
