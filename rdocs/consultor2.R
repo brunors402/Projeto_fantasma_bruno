@@ -1,4 +1,4 @@
-source("rdocs/packages.R")
+source("rdocs/source/packages.R")
 
 
 # ---------------------------------------------------------------------------- #

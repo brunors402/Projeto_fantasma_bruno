@@ -21,6 +21,7 @@ A visualização selecionada foi o boxplot, pois permite comparar a distribuiç�
 ```{r}
 #| label: fig-grafico4
 #| fig-cap: "Distribuição da idade dos clientes por loja em Âmbar Seco "
+ grafico4
 
 ```
 A partir da Figura \ref{fig-grafico4}, observa-se que as lojas da cidade de Âmbar Seco apresentam diferenças relevantes no perfil etário de seus clientes. Em todas as lojas, a mediana de idade se concentra principalmente entre 30 e 40 anos, indicando um público adulto consolidado economicamente — algo coerente com um comércio de produtos do faroeste.
