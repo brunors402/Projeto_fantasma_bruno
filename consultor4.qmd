@@ -7,67 +7,36 @@ output-file: "Nome do alocado - análise 7 e 8"
 source("rdocs/source/consultor4.R")
 ```
 
-```{r}
-# Rodar apenas uma vez na vida!
-## Instalando o tinytex(pacote apenas)
-### CRAN version
-install.packages('tinytex')
-
-
-## Baixando o tinytex
-library(tinytex)
-tinytex::install_tinytex()
-```
 
 # Objetivo
-
-Esse template foi criado para o alocado conseguir observar como ficaria sua análise o arquivo principal. É daqui que o gerente de projetos irá copiar a análise e inserir no documento principal que gerará o relatório estatístico.
+O objetivo é identificar os três produtos mais vendidos nas três lojas com maior receita no ano de 1889, a fim de compreender o comportamento de consumo e os principais itens que impulsionaram o faturamento das lojas mais lucrativas.
 
 # Análises
+Nesta análise buscamos compreender quais produtos se destacaram em volume de vendas entre as lojas de maior desempenho financeiro no ano de 1889.
+A base de dados foi filtrada apenas para o ano de 1889, e posteriormente foram selecionadas as 3 lojas com maior receita nesse período.
+Em seguida, identificaram-se os 3 produtos mais vendidos em cada uma dessas lojas.
+A visualização escolhida foi um gráfico de barras horizontais, que permite comparar claramente as quantidades vendidas entre produtos e lojas.
 
-## Análise 7
-
-## Análise 8
+## Análise 5
 
 ```{r}
-#| label: fig-
-#| fig-cap: "Gráfico "
-
-
-
-```
-
-
-::: {#quad- layout-align="center" quad-pos="H"}
-```{=latex}
-
+#| label: fig-grafico_top3
+#| fig-cap: ""Top 3 produtos mais vendidos nas Top 3 lojas com maior receita em 1889" "
+grafico_top3
 
 
 ```
+  De acordo com o Gráfico @ref(fig-top3), observa-se que as três lojas com maior receita em 1889 apresentaram padrões distintos de vendas, mas todas possuem produtos específicos com destaque expressivo de demanda.
+Entre as lojas analisadas, nota-se que:
 
-Medidas resumo da 
-:::
+Uma ou duas lojas concentram grande volume em um único produto, indicando dependência        comercial desse item;
 
+Outras apresentam vendas mais equilibradas, o que pode sugerir maior diversificação no portfólio;
 
+Em termos gerais, há uma concentração nas categorias mais vendidas, o que pode orientar estratégias de estoque e precificação.
 
-::: {#tbl-modalidades layout-align="center" tbl-pos="H"}
-```{=latex}
+  O Quadro @ref(quad:receita_top3) mostra que as receitas variam significativamente entre as lojas líderes, reforçando que o desempenho em vendas não depende apenas do volume de produtos, mas também do preço médio dos itens e da estrutura de vendas.
 
-
-```
-
-
-:::
-
-
-
-
-$\ref{fig-}$
-
-[@tbl-]
-
-
-[**Quadro** @quad-]
 
 
 
