@@ -1,10 +1,10 @@
 ---
-# Nome do arquivo PDF gerado na pasta resultado
-output-file: "Nome do alocado - análise 7 e 8"
+output-file: "entrega 4 - Top 3 produtos mais vendidos nas Top 3 lojas com maior receita em 1889"
 ---
 
 ```{r setup}
-source("rdocs/source/consultor4.R")
+#| include: false
+source("rdocs/consultor4.R")
 ```
 
 
@@ -21,12 +21,12 @@ A visualização escolhida foi um gráfico de barras horizontais, que permite co
 
 ```{r}
 #| label: fig-grafico_top3
-#| fig-cap: ""Top 3 produtos mais vendidos nas Top 3 lojas com maior receita em 1889" "
+#| fig-cap: "Top 3 produtos mais vendidos nas Top 3 lojas com maior receita em 1889 "
 grafico_top3
 
 
 ```
-  De acordo com o Gráfico @ref(fig-top3), observa-se que as três lojas com maior receita em 1889 apresentaram padrões distintos de vendas, mas todas possuem produtos específicos com destaque expressivo de demanda.
+  De acordo com o Gráfico @ref(fig-grafico_top3), observa-se que as três lojas com maior receita em 1889 apresentaram padrões distintos de vendas, mas todas possuem produtos específicos com destaque expressivo de demanda.
 Entre as lojas analisadas, nota-se que:
 
 Uma ou duas lojas concentram grande volume em um único produto, indicando dependência        comercial desse item;
@@ -37,8 +37,13 @@ Em termos gerais, há uma concentração nas categorias mais vendidas, o que pod
 
   O Quadro @ref(quad:receita_top3) mostra que as receitas variam significativamente entre as lojas líderes, reforçando que o desempenho em vendas não depende apenas do volume de produtos, mas também do preço médio dos itens e da estrutura de vendas.
 
+#Conclusão
+
+Esta análise evidencia os principais produtos responsáveis pelo faturamento das lojas mais rentáveis da Old Town Road Ltda. no ano de 1889.
+As informações obtidas podem subsidiar decisões estratégicas relacionadas à gestão de estoque, planejamento de vendas e foco em produtos de maior retorno financeiro.
+A abordagem segue o padrão da ESTAT, com gráfico institucional e quadro resumo de medidas descritivas.
 
 
-
+[**Quadro** @quad-receita_top3]
 
 
