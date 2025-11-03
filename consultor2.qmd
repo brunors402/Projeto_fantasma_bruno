@@ -10,35 +10,42 @@ source("rdocs/consultor2.R")
 
 
 # Objetivo
-Nesta entrega, apresentamos duas análises descritivas fundamentais para compreensão do perfil dos clientes e uma análise inferencial para entender a relação entre altura e peso.
+O propósito é avaliar se existe relação linear entre o peso (em kg) e a altura (em cm) dos clientes da base de dados, de modo a identificar padrões antropométricos que possam ser úteis em futuras estratégias de mercado.
 
 # Análises
 
 ## Análise 3
-O boxplot evidencia que há variação relevante dentro de ambos os grupos, indicando que o poder aquisitivo dos clientes não é uniforme.
-```{r}
+Esta análise tem como objetivo verificar a relação entre as variáveis altura (cm) e peso (kg) dos clientes.
+Os dados foram extraídos da aba infos_clientes do arquivo relatorio_old_town_road.xlsx.
+Durante o tratamento, foram realizadas as seguintes transformações:
 
+-Conversão de peso de libras para quilogramas (1 lb = 0.453592 kg);
+
+-Conversão de altura de decímetros para centímetros (1 dm = 10 cm);
+
+-Remoção de valores ausentes (NA) para garantir consistência nas análises.
+
+O gráfico a seguir ilustra a dispersão entre as duas variáveis, bem como a linha de tendência linear ajustada.
+
+O $ref(fig-grafico2) apresenta a dispersão dos clientes em função de suas alturas e pesos, com uma linha de regressão linear (tracejada) representando a tendência central.
+
+```{r}
 #| label: fig-grafico2
-#| fig-cap: "Distribuição da renda anual segundo o sexo dos clientes"
-grafico2
-
-```
-Esses resultados sugerem uma potencial desigualdade de renda entre os sexos, com homens ganhando mais em média. Contudo, a presença de outliers extremos indica um mercado com clientes de alto poder financeiro, que podem influenciar estratégias comerciais mais segmentadas para consumo premium.
-
-
-
-## Análise 4
-A análise teve como objetivo investigar a relação entre a altura (em centímetros) e o peso (em quilogramas) dos clientes utilizando um gráfico de dispersão com linha de regressão. Visualmente, observa-se que, à medida que a altura aumenta, o peso tende também a aumentar, o que sugere uma relação positiva entre as variáveis.
-
-```{r}
-#| label: fig-grafico3
 #| fig-cap: "Relação entre altura e peso dos clientes"
 grafico3
 
 
 
 ```
-Os resultados sugerem uma potencial desigualdade de renda entre os sexos, com homens ganhando mais em média. Contudo, a presença de outliers extremos indica um mercado com clientes de alto poder financeiro, que podem influenciar estratégias comerciais mais segmentadas para consumo premium.
+
+
+##Análise Descritiva
+
+De acordo com o Gráfico 2, observa-se uma correlação positiva moderada entre o peso e a altura dos clientes, indicando que à medida que a altura aumenta, o peso tende a aumentar também.
+
+Com base nos resultados obtidos, conclui-se que há relação linear positiva significativa entre o peso e a altura dos clientes.
+Em termos práticos, clientes mais altos tendem a apresentar pesos maiores, o que é consistente com o comportamento antropométrico esperado.
+Essas informações podem auxiliar o cliente Old Town Road Ltda. na segmentação de mercado e personalização de produtos, considerando perfis físicos distintos.
 
 ::: {#quad- layout-align="center" quad-pos="H"}
 ```{=latex}

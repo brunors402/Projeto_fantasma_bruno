@@ -26,10 +26,9 @@ source("rdocs/source/packages.R")
 source("packages.R") 
 
 
-arquivo <- "relatorio_old_town_road.xlsx"  
+arquivo <- "relatorio_old_town_road.xlsx"
 
 clientes <- read_excel(arquivo, sheet = "infos_clientes")
-
 
 dados <- clientes %>%
   select(Sex, Age, Weight_lbs, Height_dm, Anual_Income_usd) %>%
@@ -42,37 +41,36 @@ dados <- clientes %>%
   ) %>%
   drop_na() %>%
   mutate(
-    peso = as.numeric(peso_lbs) * 0.453592,   
-    altura = as.numeric(altura_dm) * 10,      
-    renda_brl = as.numeric(renda_usd) * 5.31  
+    peso = as.numeric(peso_lbs) * 0.453592,    
+    altura = as.numeric(altura_dm) * 10,       
+    renda_brl = as.numeric(renda_usd) * 5.31   
   )
 
+correlacao <- cor(dados$peso, dados$altura, use = "complete.obs", method = "pearson")
 
-# Gráfico 2 - Renda por sexo
-
-grafico2 <- ggplot(dados, aes(x = sexo, y = renda_brl, fill = sexo)) +
-  geom_boxplot(alpha = 0.9) +
+grafico2 <- ggplot(dados, aes(x = altura, y = peso)) +
+  geom_point(color = "#A11D21", alpha = 0.7, size = 3) +
+  geom_smooth(method = "lm", se = TRUE, color = "#A11D21", linetype = "dashed") +
   labs(
-    title = "Distribuição da Renda Anual (R$) por Sexo",
-    x = "Sexo",
-    y = "Renda (R$)"
-  ) +
-  theme_estat()
-
-# Gráfico 3 - Peso x Altura
-
-grafico3 <- ggplot(dados, aes(x = altura, y = peso, color = sexo)) +
-  geom_point(size = 3, alpha = 0.7) +
-  geom_smooth(method = "lm", se = TRUE, linetype = "dashed") +
-  labs(
-    title = "Relação entre Peso e Altura dos Clientes",
+    title = "Relação entre Peso (kg) e Altura (cm) dos Clientes",
+    subtitle = "Dispersão e linha de tendência linear",
     x = "Altura (cm)",
     y = "Peso (kg)"
   ) +
   theme_estat()
 
+teste_cor <- cor.test(dados$peso, dados$altura, method = "pearson")
 
-#correlação de Pearson
+quadro_altura <- print_quadro_resumo(dados, altura, 
+                                     title = "Medidas resumo da variável Altura (cm)",
+                                     label = "quad:altura")
 
-correlacao <- cor(dados$peso, dados$altura, method = "pearson")
+quadro_peso <- print_quadro_resumo(dados, peso, 
+                                   title = "Medidas resumo da variável Peso (kg)",
+                                   label = "quad:peso")
+
+
 correlacao
+teste_cor
+
+

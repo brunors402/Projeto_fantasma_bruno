@@ -79,7 +79,7 @@ grafico_top3 <- ggplot(top3_produtos, aes(x = reorder(NameProduct, Quantidade_To
 grafico_top3
 
 
-quadro4 <- print_quadro_resumo(
+receita_top3 <- print_quadro_resumo(
   data = top3_lojas,
   var_name = Receita_Total,
   title = "Medidas resumo da Receita Total (Top 3 lojas em 1889)",
