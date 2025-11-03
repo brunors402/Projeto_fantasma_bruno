@@ -32,7 +32,7 @@ O $ref(fig-grafico2) apresenta a dispersão dos clientes em função de suas alt
 ```{r}
 #| label: fig-grafico2
 #| fig-cap: "Relação entre altura e peso dos clientes"
-grafico3
+grafico2
 
 
 
@@ -41,7 +41,7 @@ grafico3
 
 ##Análise Descritiva
 
-De acordo com o Gráfico 2, observa-se uma correlação positiva moderada entre o peso e a altura dos clientes, indicando que à medida que a altura aumenta, o peso tende a aumentar também.
+De acordo com o @ref(fig-grafico2), observa-se uma correlação positiva moderada entre o peso e a altura dos clientes, indicando que à medida que a altura aumenta, o peso tende a aumentar também.
 
 Com base nos resultados obtidos, conclui-se que há relação linear positiva significativa entre o peso e a altura dos clientes.
 Em termos práticos, clientes mais altos tendem a apresentar pesos maiores, o que é consistente com o comportamento antropométrico esperado.
