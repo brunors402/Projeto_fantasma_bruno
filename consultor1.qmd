@@ -6,13 +6,20 @@ output-file: "entrega_1 - A receita média das lojas"
 source("rdocs/consultor1.R")
 ```
 
-# Objetivo
-O objetivo desta análise é identificar a variação da receita média das lojas da Old Town Road Ltda. ao longo da década de 1880.
-Essa informação permite avaliar o desempenho histórico de vendas e detectar possíveis tendências de crescimento ou retração ao longo dos anos, considerando a conversão de moeda de USD → BRL (1 USD = 5,31 BRL).
-A variável Receita_BRL foi obtida multiplicando‐se a quantidade vendida pelo preço unitário e pela taxa de conversão para reais.
-Por fim, foram filtradas apenas as vendas realizadas entre os anos 1880 e 1889.
 
-# Análises
+O objetivo desta análise é avaliar a evolução da receita média das lojas entre os anos de 1880 e 1889.
+Foram consideradas todas as lojas registradas no banco de dados de vendas e calculada a receita total anual,
+convertida de dólares (USD) para reais (BRL), com cotação de 1 USD = R$5,31.
+
+As variáveis analisadas são:
+
+Ano (extraído da data da venda),
+
+Receita média por loja (em reais).
+
+A visualização escolhida foi um gráfico de linha, por ser ideal para acompanhar a evolução temporal da receita média.
+
+
 O gráfico a seguir apresenta a receita média anual (em R$) das lojas no período analisado.
 
 ```{r}
@@ -22,27 +29,39 @@ grafico1
 
 
 ```
-
-Observa-se, pela Figura @ref(fig-grafico1), que a receita média anual das lojas apresentou variações moderadas ao longo da década.Nos primeiros anos (1880 a 1883) há uma tendência de estabilidade, seguida por um crescimento gradual até o final do período (1889). Esse comportamento pode estar associado à expansão do comércio regional, aumento da demanda local e melhor desempenho das lojas de maior porte. O padrão observado sugere uma trajetória positiva e consistente, indicando que as operações comerciais da Old Town Road Ltda consolidaram-se nesse intervalo temporal.
-
-A análise evidencia que a receita média anual das lojas aumentou progressivamente entre 1880 e 1889, refletindo um cenário positivo de expansão de vendas.
-
-
-
-
-Medidas resumo da 
-:::
-
-
-
-::: {#tbl-modalidades layout-align="center" tbl-pos="H"}
+::: {#tbl-receita_media layout-align="center" tbl-pos="H"}
 ```{=latex}
+\begin{tabular} { | l |
+			S[table-format = 8.2]
+			|}
+	\hline
+		\textbf{Estatística} & \textbf{Valor} \\
+		\hline
+		Média & 1135,15 \\
+		Desvio Padrão & 33,31 \\
+		Variância & 1109,79 \\
+		Mínimo & 1099,19 \\
+		1º Quartil & 1111,75 \\
+		Mediana & 1120,97 \\
+		3º Quartil & 1162,13 \\
+		Máximo & 1196,21 \\
+	\hline
+	\end{tabular}
 
 
 ```
-
-
+Medidas resumo da Receita Média das Lojas (1880–1889)
 :::
+Observa-se, pela $\ref{fig-grafico1}$, que a receita média anual das lojas apresentou variações moderadas ao longo da década.Nos primeiros anos (1880 a 1883) há uma tendência de estabilidade, seguida por um crescimento gradual até o final do período (1889). Esse comportamento pode estar associado à expansão do comércio regional, aumento da demanda local e melhor desempenho das lojas de maior porte. O padrão observado sugere uma trajetória positiva e consistente, indicando que as operações comerciais da Old Town Road Ltda consolidaram-se nesse intervalo temporal.
+
+A análise evidencia que a receita média anual das lojas aumentou progressivamente entre 1880 e 1889, refletindo um cenário positivo de expansão de vendas.
+
+O [**Quadro** @quad-receita_media] mostra que a média da receita das lojas entre 1880 e 1889 foi de aproximadamente R$ 1135,15, com desvio-padrão de R$ 33,31, indicando uma variação moderada entre os anos.
+A diferença entre o mínimo e o máximo reflete períodos de baixa e alta sazonalidade, possivelmente influenciados por flutuações na demanda ou eventos econômicos locais.
+A mediana próxima da média sugere uma distribuição simétrica, sem grandes distorções.
+Essas medidas complementam o gráfico anterior ao quantificar a tendência de crescimento gradual e consistente da receita média ao longo da década.
+
+
 
 
 

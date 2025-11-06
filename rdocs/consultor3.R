@@ -32,10 +32,12 @@ pacman::p_load(tidyverse, readxl)
 
 arquivo <- "relatorio_old_town_road.xlsx"
 
+
 cidades <- read_excel(arquivo, sheet = "infos_cidades")
 lojas    <- read_excel(arquivo, sheet = "infos_lojas")
 clientes <- read_excel(arquivo, sheet = "infos_clientes")
 vendas   <- read_excel(arquivo, sheet = "relatorio_vendas")
+
 
 if(!"CityID" %in% names(cidades) & "C1tyID" %in% names(cidades)) {
   cidades <- cidades %>% rename(CityID = C1tyID)
@@ -49,35 +51,28 @@ if(!"ClientID" %in% names(clientes) & "Cli3ntID" %in% names(clientes)) {
   clientes <- clientes %>% rename(ClientID = Cli3ntID)
 }
 
-if("CityID" %in% names(cidades)) cidades$CityID <- as.character(cidades$CityID)
-if("CityID" %in% names(lojas)) lojas$CityID <- as.character(lojas$CityID)
-if("StoreID" %in% names(vendas)) vendas$StoreID <- as.character(vendas$StoreID)
-if("ClientID" %in% names(vendas)) vendas$ClientID <- as.character(vendas$ClientID)
-if("ClientID" %in% names(clientes)) clientes$ClientID <- as.character(clientes$ClientID)
 
-lojas$StoreID <- as.character(lojas$StoreID)
-vendas$StoreID <- as.character(vendas$StoreID)
-lojas_amber <- lojas %>%
+cidades$CityID  <- as.character(cidades$CityID)
+lojas$CityID    <- as.character(lojas$CityID)
+lojas$StoreID   <- as.character(lojas$StoreID)
+vendas$StoreID  <- as.character(vendas$StoreID)
+vendas$ClientID <- as.character(vendas$ClientID)
+clientes$ClientID <- as.character(clientes$ClientID)
+
+
+dados_ambar <- lojas %>%
   left_join(cidades, by = "CityID") %>%
-  filter(NameCity == "Âmbar Seco")
-
-clientes_amber <- vendas %>%
-  filter(StoreID %in% lojas_amber$StoreID) %>%
+  filter(NameCity == "Âmbar Seco") %>%
+  left_join(vendas, by = "StoreID") %>%
   left_join(clientes, by = "ClientID") %>%
-  left_join(lojas_amber, by = "StoreID") %>%
-  select(NameStore, Age) %>%
+  select(NameCity, NameStore, Age) %>%
   drop_na()
 
-clientes_amber <- vendas %>%
-  filter(StoreID %in% lojas_amber$StoreID) %>%
-  left_join(clientes, by = "ClientID") %>%
-  left_join(lojas_amber, by = "StoreID") %>%
-  select(NameStore, Age) %>%
-  drop_na()
 
-glimpse(clientes_amber)
+glimpse(dados_ambar)
 
-grafico4 <- ggplot(clientes_amber, aes(x = NameStore, y = Age)) +
+
+grafico4 <- ggplot(dados_ambar, aes(x = NameStore, y = Age)) +
   geom_boxplot(fill = "#A11D21", alpha = 0.8) +
   stat_summary(fun = mean, geom = "point", size = 3, color = "black") +
   labs(
@@ -85,22 +80,14 @@ grafico4 <- ggplot(clientes_amber, aes(x = NameStore, y = Age)) +
     x = "Loja",
     y = "Idade (anos)"
   ) +
-  theme_minimal()
+  theme_estat()
 
 grafico4
 
-medidas_idade <- clientes_amber %>%
-  group_by(NameStore) %>%
-  summarise(
-    media = round(mean(Age), 2),
-    mediana = median(Age),
-    min = min(Age),
-    max = max(Age),
-    sd = round(sd(Age), 2),
-    q1 = quantile(Age, 0.25),
-    q3 = quantile(Age, 0.75),
-    n = n(),
-    .groups = "drop"
-  )
 
-medidas_idade
+idade_cliente <- print_quadro_resumo(
+  dados_ambar,
+  Age,
+  title = "Medidas resumo da idade dos clientes em Âmbar Seco",
+  label = "quad:idade_ambar"
+)

@@ -26,7 +26,31 @@ grafico_top3
 
 
 ```
-  De acordo com o Gráfico @ref(fig-grafico_top3), observa-se que as três lojas com maior receita em 1889 apresentaram padrões distintos de vendas, mas todas possuem produtos específicos com destaque expressivo de demanda.
+::: {#quad-receita_top3 layout-align="center" quad-pos="H"}
+```{=latex}
+\begin{tabular} { | l |
+			S[table-format = 8.2]
+			|}
+	\hline
+		\textbf{Estatística} & \textbf{Valor} \\
+		\hline
+		Média & 191780.6 \\
+		Desvio Padrão & 8753.06 \\
+		Variância & 76616083 \\
+		Mínimo & 181689.1 \\
+		1º Quartil & 189014.7 \\
+		Mediana & 196340.3 \\
+		3º Quartil & 196826.4 \\
+		Máximo & 197312.5 \\
+	\hline
+	\end{tabular}
+
+
+```
+
+Medidas resumo da Receita Total (Top 3 lojas em 1889) 
+:::
+  De acordo com a $\ref{fig-grafico_top3}$ , observa-se que as três lojas com maior receita em 1889 apresentaram padrões distintos de vendas, mas todas possuem produtos específicos com destaque expressivo de demanda.
 Entre as lojas analisadas, nota-se que:
 
 Uma ou duas lojas concentram grande volume em um único produto, indicando dependência        comercial desse item;
@@ -35,15 +59,15 @@ Outras apresentam vendas mais equilibradas, o que pode sugerir maior diversifica
 
 Em termos gerais, há uma concentração nas categorias mais vendidas, o que pode orientar estratégias de estoque e precificação.
 
-  O Quadro @ref(quad:receita_top3) mostra que as receitas variam significativamente entre as lojas líderes, reforçando que o desempenho em vendas não depende apenas do volume de produtos, mas também do preço médio dos itens e da estrutura de vendas.
+  O [**Quadro** @quad-receita_top3] mostra que as receitas variam significativamente entre as lojas líderes, reforçando que o desempenho em vendas não depende apenas do volume de produtos, mas também do preço médio dos itens e da estrutura de vendas.
 
-#Conclusão
+
 
 Esta análise evidencia os principais produtos responsáveis pelo faturamento das lojas mais rentáveis da Old Town Road Ltda. no ano de 1889.
 As informações obtidas podem subsidiar decisões estratégicas relacionadas à gestão de estoque, planejamento de vendas e foco em produtos de maior retorno financeiro.
 A abordagem segue o padrão da ESTAT, com gráfico institucional e quadro resumo de medidas descritivas.
 
 
-[**Quadro** @quad-receita_top3]
+
 
 

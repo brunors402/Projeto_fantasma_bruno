@@ -1,0 +1,394 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  brazilian,
+]{estat/estat}
+\usepackage{xcolor}
+\usepackage[left=3cm,right=2cm,top=3cm,bottom=2cm]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{Arial}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\ifPDFTeX
+\else
+\babelfont{rm}[]{Arial}
+\fi
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+\authors{%
+    Estatiano 1 \\
+    Estatiano 2\\
+    Estatiano 3\\
+}
+
+% escreva o nome do cliente aqui
+% se for mais de um separe por \\
+\client{%
+    ESTAT
+}
+% Baixando pacotes
+\RequirePackage{fancyhdr}
+\RequirePackage{graphicx}
+
+\setlength\headheight{28pt}  
+
+\setlength{\parindent}{15pt} % Adiciona indentação nos parágrafos
+\setlength{\parskip}{0pt} % Adiciona 0 espaço entro os parágrafos
+
+\let\oldsection\section
+\renewcommand\section{\clearpage\oldsection}
+\makeatletter
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{plain}
+\@ifundefined{c@chapter}{\newfloat{quadro}{h}{loquad}}{\newfloat{quadro}{h}{loquad}[chapter]}
+\floatname{quadro}{Quadro}
+\floatstyle{plaintop}
+\restylefloat{quadro}
+\newcommand*\listofquadros{\listof{quadro}{List of Testes}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Índice}
+\else
+  \newcommand\contentsname{Índice}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{Lista de Figuras}
+\else
+  \newcommand\listfigurename{Lista de Figuras}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{Lista de Tabelas}
+\else
+  \newcommand\listtablename{Lista de Tabelas}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figura}
+\else
+  \newcommand\figurename{Figura}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Tabela}
+\else
+  \newcommand\tablename{Tabela}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listagem}
+\newcommand*\listoflistings{\listof{codelisting}{Lista de Listagens}}
+\captionsetup{labelsep=colon}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdflang={pt-br},
+  colorlinks=true,
+  linkcolor={black},
+  filecolor={black},
+  citecolor={black},
+  urlcolor={black},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\author{}
+\date{}
+\begin{document}
+
+% Limpando tudo
+\fancyhf{} 
+
+% Ajustes do header
+\fancyhead[L]{} % limpando o lado esquerdo
+\fancyhead[R]{\includegraphics[width=0.20\textwidth]{estat/imagens/estat.png}} % adicionando logo no canto direito
+\renewcommand{\headrulewidth}{0pt}   % sem linha embaixo da logo
+
+% Ajustes de fim de página
+\fancyfoot[R]{\textcolor{white}{\thepage}} % Número em branco no canto direito
+
+% Aplicando o estilo que acabamos de criar
+\pagestyle{fancy} 
+
+
+\labelformat{quadro}{\textbf{#1}}
+
+\renewcommand*\contentsname{Sumário}
+{
+\hypersetup{linkcolor=}
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+
+\section{Objetivo}\label{objetivo}
+
+O propósito é avaliar se existe relação linear entre o peso (em kg) e a
+altura (em cm) dos clientes da base de dados, de modo a identificar
+padrões antropométricos que possam ser úteis em futuras estratégias de
+mercado.
+
+\section{Análises}\label{anuxe1lises}
+
+\subsection{Análise 3}\label{anuxe1lise-3}
+
+Esta análise tem como objetivo verificar a relação entre as variáveis
+altura (cm) e peso (kg) dos clientes. Os dados foram extraídos da aba
+infos\_clientes do arquivo relatorio\_old\_town\_road.xlsx. Durante o
+tratamento, foram realizadas as seguintes transformações:
+
+-Conversão de peso de libras para quilogramas (1 lb = 0.453592 kg);
+
+-Conversão de altura de decímetros para centímetros (1 dm = 10 cm);
+
+-Remoção de valores ausentes (NA) para garantir consistência nas
+análises.
+
+O gráfico a seguir ilustra a dispersão entre as duas variáveis, bem como
+a linha de tendência linear ajustada.
+
+O \$ref(fig-grafico2) apresenta a dispersão dos clientes em função de
+suas alturas e pesos, com uma linha de regressão linear (tracejada)
+representando a tendência central.
+
+\begin{figure}[H]
+
+\caption{\label{fig-grafico2}Relação entre altura e peso dos clientes}
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{consultor2_files/figure-pdf/fig-grafico2-1.pdf}}
+
+}
+
+\end{figure}%
+
+\begin{quadro}[H]
+
+\caption{\label{quad-quadro_altura}Medidas resumo da altura}
+
+\centering{
+
+\begin{tabular} { | l |
+            S[table-format = 8.2]
+            |}
+    \hline
+        \textbf{Estatística} & \textbf{Valor} \\
+        \hline
+        Média & 171,48 \\
+        Desvio Padrão & 9,87 \\
+        Variância & 97,38 \\
+        Mínimo & 150 \\
+        1º Quartil & 164,8 \\
+        Mediana & 171,75 \\
+        3º Quartil & 178 \\
+        Máximo & 200 \\
+    \hline
+    \end{tabular}
+
+}
+
+\end{quadro}%
+
+\begin{quadro}[H]
+
+\caption{\label{quad-quadro_peso}Medidas resumo do peso}
+
+\centering{
+
+\begin{quadro}[H]
+    \setlength{ \tabcolsep}{9pt}
+    \renewcommand{  \arraystretch}{1.20}
+    \caption{Medidas resumo da variável Peso (kg)}
+    \centering
+    \begin{adjustbox}{max width=\textwidth}
+    \begin{tabular} { | l |
+            S[table-format = 8.2]
+            |}
+    \hline
+        \textbf{Estatística} & \textbf{Valor} \\
+        \hline
+        Média & 75,19 \\
+        Desvio Padrão & 11,92 \\
+        Variância & 142 \\
+        Mínimo & 45 \\
+        1º Quartil & 66,9 \\
+        Mediana & 75,3 \\
+        3º Quartil & 83,2 \\
+        Máximo & 119,3 \\
+    \hline
+    \end{tabular}
+
+}
+
+\end{quadro}%
+
+De acordo com o @ref(fig-grafico2), observa-se uma correlação positiva
+moderada entre o peso e a altura dos clientes, indicando que à medida
+que a altura aumenta, o peso tende a aumentar também.
+
+Com base nos resultados obtidos, conclui-se que há relação linear
+positiva significativa entre o peso e a altura dos clientes. Em termos
+práticos, clientes mais altos tendem a apresentar pesos maiores, o que é
+consistente com o comportamento antropométrico esperado. Essas
+informações podem auxiliar o cliente Old Town Road Ltda. na segmentação
+de mercado e personalização de produtos, considerando perfis físicos
+distintos.
+
+Análise Descritiva --- Altura
+
+O \textbf{Quadro}~\ref{quad-quadro_altura} indica uma média de
+aproximadamente 171,48 cm, com um desvio-padrão de 9,87 cm, o que sugere
+baixa dispersão dos valores em torno da média. A diferença entre o
+mínimo e o máximo é pequena, reforçando a homogeneidade da amostra
+quanto à estatura. Os quartis revelam que metade dos clientes possui
+altura entre 164,8 cm e 178 cm, mostrando uma tendência central bem
+definida. Em conjunto com o gráfico de dispersão, essa análise confirma
+que indivíduos mais altos tendem a apresentar maiores pesos,
+caracterizando uma relação linear positiva significativa entre as
+variáveis.
+
+Análise Descritiva --- Peso
+
+O \textbf{Quadro}~\ref{quad-quadro_peso} mostra uma média de
+aproximadamente 75,19 kg e um desvio-padrão de 11,92 kg, indicando
+moderada variação entre os indivíduos. A amplitude entre o mínimo e o
+máximo revela a existência de clientes com perfis físicos distintos,
+desde indivíduos mais leves até outros com peso mais elevado. Os quartis
+demonstram que 50\% dos clientes possuem peso entre 66,9 kg e 83,2 kg,
+caracterizando uma distribuição relativamente equilibrada, sem grandes
+assimetrias. Esses resultados estão de acordo com o gráfico de
+dispersão, que evidencia uma correlação positiva entre peso e altura.
+
+\begin{table}[H]
+
+\caption{\label{tbl-modalidades}}
+
+\centering{
+
+}
+
+\end{table}%
+
+\(\ref{fig-}\)
+
+{[}@tbl-{]}
+
+{[}**Quadro** @quad-{]}
+
+
+
+
+\end{document}

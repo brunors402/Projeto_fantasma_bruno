@@ -61,7 +61,7 @@ grafico1 <- ggplot(receita_media_ano, aes(x = Ano, y = Receita_Media)) +
             vjust = -0.5, size = 3) +
   labs(
     title = "Receita média anual das lojas (1880–1889)",
-    subtitle = "Valores convertidos para reais (R$)",
+    #subtitle = "Valores convertidos para reais (R$)",
     x = "Ano",
     y = "Receita média (R$)"
   ) +
@@ -71,14 +71,14 @@ grafico1 <- ggplot(receita_media_ano, aes(x = Ano, y = Receita_Media)) +
 grafico1
 
 
-print_quadro_resumo(
+receita_media <- print_quadro_resumo(
   data = receita_media_ano,
   var_name = Receita_Media,
   title = "Medidas resumo da Receita Média Anual (1880–1889)",
-  label = "quad:receita_media"
+  
 )
 
-#grafico1 <- ggplot(receita_media, aes(x = Ano, y = Receita_Media_BRL, group = 1)) +
+#grafico1t <- ggplot(receita_media, aes(x = Ano, y = Receita_Media_BRL, group = 1)) +
   #geom_line(color = "#A11D21", size = 1.2) +
   #geom_point(color = "#003366", size = 3) +
   #labs(
@@ -86,9 +86,9 @@ print_quadro_resumo(
     #subtitle = "Valores convertidos para reais (R$)",
     #x = "Ano",
     #y = "Receita média por loja (R$)"
-  #) +
+    #) +
   #theme_estat()
-
+#grafico1t)
 
 #print_quadro_resumo(receita_media, Receita_Media_BRL,
                     #title = "Medidas resumo da Receita Média das Lojas (1880–1889)",

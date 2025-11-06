@@ -61,6 +61,7 @@ grafico2 <- ggplot(dados, aes(x = altura, y = peso)) +
 
 teste_cor <- cor.test(dados$peso, dados$altura, method = "pearson")
 
+
 quadro_altura <- print_quadro_resumo(dados, altura, 
                                      title = "Medidas resumo da variável Altura (cm)",
                                      label = "quad:altura")

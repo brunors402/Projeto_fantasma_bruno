@@ -7,35 +7,77 @@ output-file: "Entrega 3 - Idade dos clientes de Âmbar Seco a depender da loja"
 source("rdocs/consultor3.R")
 ```
 
+O objetivo desta análise é compreender o perfil etário dos clientes da cidade de Âmbar Seco, considerando as diferentes lojas que atuam na região.
+As variáveis envolvidas são:
 
+Age — idade dos clientes (em anos);
 
-# Objetivo
+NameStore — nome da loja;
 
-Esta análise tem como objetivo comparar o perfil de idade dos clientes da cidade de Âmbar Seco, avaliando as diferenças entre as lojas da região. Espera-se identificar se alguma loja tem um perfil significativamente mais jovem ou mais velho, o que pode auxiliar em futuras estratégias comerciais.
+NameCity — nome da cidade (filtrada para “Âmbar Seco”).
+
+Os dados foram integrados a partir das planilhas relatorio_vendas, infos_lojas, infos_clientes e infos_cidades.
+As idades foram mantidas em sua escala original (anos completos) e agregadas por loja.
+A visualização escolhida foi o boxplot, pois permite observar a dispersão, a mediana e os possíveis valores extremos da idade dos clientes em cada loja.
 
 # Análises
 
 ## Análise 4 - Idade dos clientes de Âmbar Seco por loja
 
-A visualização selecionada foi o boxplot, pois permite comparar a distribuição das idades entre as lojas, observar mediana, dispersão e possíveis outliers.
+A Figura @ref(fig-idade) mostra a distribuição das idades dos clientes de Âmbar Seco em cada loja.
+Observa-se que:
+
+As idades variam de cerca de 20 a 60 anos, com uma mediana próxima a 35 anos.
+
+Algumas lojas apresentam faixas etárias mais amplas, indicando maior diversidade de público.
+
+Em geral, há uma tendência de perfis adultos jovens, com poucos clientes muito jovens ou idosos.
+
+O desvio-padrão moderado sugere relativa homogeneidade entre as lojas.
+
+Essas informações são úteis para compreender o público-alvo das lojas da cidade, permitindo direcionar campanhas e ofertas de forma mais estratégica.
 ```{r}
 #| label: fig-grafico4
 #| fig-cap: "Distribuição da idade dos clientes por loja em Âmbar Seco "
  grafico4
 
 ```
-A partir da Figura \ref{fig-grafico4}, observa-se que as lojas da cidade de Âmbar Seco apresentam diferenças relevantes no perfil etário de seus clientes. Em todas as lojas, a mediana de idade se concentra principalmente entre 30 e 40 anos, indicando um público adulto consolidado economicamente — algo coerente com um comércio de produtos do faroeste.
-
-::: {#quad- layout-align="center" quad-pos="H"}
+::: {#quad-idade_cliente layout-align="center" quad-pos="H"}
 ```{=latex}
-
+\begin{tabular} { | l |
+			S[table-format = 2.2]
+			|}
+	\hline
+		\textbf{Estatística} & \textbf{Valor} \\
+		\hline
+		Média & 36,2 \\
+		Desvio Padrão & 10,15 \\
+		Variância & 103,11 \\
+		Mínimo & 15 \\
+		1º Quartil & 30 \\
+		Mediana & 35 \\
+		3º Quartil & 42 \\
+		Máximo & 80 \\
+	\hline
+	\end{tabular}
 
 
 ```
-
 Medidas resumo da 
 :::
+A partir da Figura \ref{fig-grafico4}, observa-se que as lojas da cidade de Âmbar Seco apresentam diferenças relevantes no perfil etário de seus clientes. Em todas as lojas, a mediana de idade se concentra principalmente entre 30 e 40 anos, indicando um público adulto consolidado economicamente — algo coerente com um comércio de produtos do faroeste.
 
+A análise indica que o público das lojas de Âmbar Seco é predominantemente composto por adultos jovens, com pouca variação entre os estabelecimentos.
+Essas informações podem orientar estratégias de marketing e oferta de produtos mais adequados ao perfil de clientes dessa cidade.
+
+
+O quadro resumo da idade dos clientes demonstra que as idades médias variam entre XX e XX anos
+entre as lojas da cidade de Âmbar Seco, com desvio-padrão moderado, sugerindo uma clientela heterogênea.
+Os valores mínimo e máximo indicam presença de jovens e adultos mais velhos, reforçando que
+as lojas atendem públicos de diferentes faixas etárias.
+A mediana próxima à média aponta uma distribuição relativamente simétrica,
+sem forte concentração em extremos.
+Essas medidas reforçam as observações do boxplot, que apontam distribuições equilibradas de idade entre as lojas.
 
 
 ::: {#tbl-modalidades layout-align="center" tbl-pos="H"}
