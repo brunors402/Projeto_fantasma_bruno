@@ -39,59 +39,57 @@ grafico2
 ```
 ::: {#quad-quadro_altura layout-align="center" quad-pos="H"}
 ```{=latex}
-\begin{tabular} { | l |
-			S[table-format = 8.2]
-			|}
-	\hline
-		\textbf{Estatística} & \textbf{Valor} \\
-		\hline
-		Média & 171,48 \\
-		Desvio Padrão & 9,87 \\
-		Variância & 97,38 \\
-		Mínimo & 150 \\
-		1º Quartil & 164,8 \\
-		Mediana & 171,75 \\
-		3º Quartil & 178 \\
-		Máximo & 200 \\
-	\hline
-	\end{tabular}
-
-
+\begin{table}[H]
+\centering
+\begin{tabular}{ | l | S[table-format = 8.2] |}
+\hline
+\textbf{Estatística} & \textbf{Valor} \\
+\hline
+Média & 171,48 \\
+Desvio Padrão & 9,87 \\
+Variância & 97,38 \\
+Mínimo & 150 \\
+1º Quartil & 164,8 \\
+Mediana & 171,75 \\
+3º Quartil & 178 \\
+Máximo & 200 \\
+\hline
+\end{tabular}
+\caption{Medidas resumo da variável Altura (cm)}
+\end{table}
 ```
 Medidas resumo da altura
 :::
 ::: {#quad-quadro_peso layout-align="center" quad-pos="H"}
 ```{=latex}
-\begin{quadro}[H]
-	\setlength{	\tabcolsep}{9pt}
-	\renewcommand{	\arraystretch}{1.20}
-	\caption{Medidas resumo da variável Peso (kg)}
-	\centering
-	\begin{adjustbox}{max width=\textwidth}
-	\begin{tabular} { | l |
-			S[table-format = 8.2]
-			|}
-	\hline
-		\textbf{Estatística} & \textbf{Valor} \\
-		\hline
-		Média & 75,19 \\
-		Desvio Padrão & 11,92 \\
-		Variância & 142 \\
-		Mínimo & 45 \\
-		1º Quartil & 66,9 \\
-		Mediana & 75,3 \\
-		3º Quartil & 83,2 \\
-		Máximo & 119,3 \\
-	\hline
-	\end{tabular}
-
-
+\begin{table}[H]
+\centering
+\setlength{\tabcolsep}{9pt}
+\renewcommand{\arraystretch}{1.20}
+\caption{Medidas resumo da variável Peso (kg)}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{ | l | S[table-format = 8.2] |}
+\hline
+\textbf{Estatística} & \textbf{Valor} \\
+\hline
+Média & 75,19 \\
+Desvio Padrão & 11,92 \\
+Variância & 142 \\
+Mínimo & 45 \\
+1º Quartil & 66,9 \\
+Mediana & 75,3 \\
+3º Quartil & 83,2 \\
+Máximo & 119,3 \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
 ```
 Medidas resumo do peso
 :::
 
 
-De acordo com o @ref(fig-grafico2), observa-se uma correlação positiva moderada entre o peso e a altura dos clientes, indicando que à medida que a altura aumenta, o peso tende a aumentar também.
+De acordo com o $\ref{fig-grafico2}$, observa-se uma correlação positiva moderada entre o peso e a altura dos clientes, indicando que à medida que a altura aumenta, o peso tende a aumentar também.
 
 Com base nos resultados obtidos, conclui-se que há relação linear positiva significativa entre o peso e a altura dos clientes.
 Em termos práticos, clientes mais altos tendem a apresentar pesos maiores, o que é consistente com o comportamento antropométrico esperado.
@@ -100,7 +98,7 @@ Essas informações podem auxiliar o cliente Old Town Road Ltda. na segmentaçã
 
 Análise Descritiva — Altura
 
-O [**Quadro** @quad-quadro_altura] indica uma média de aproximadamente 171,48 cm,
+O [**Quadro** @quad-quadro_altura]indica uma média de aproximadamente 171,48 cm,
 com um desvio-padrão de 9,87 cm, o que sugere baixa dispersão dos valores em torno da média.
 A diferença entre o mínimo e o máximo é pequena, reforçando a homogeneidade da amostra quanto à estatura.
 Os quartis revelam que metade dos clientes possui altura entre 164,8 cm e 178 cm,

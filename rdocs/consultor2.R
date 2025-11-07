@@ -58,17 +58,24 @@ grafico2 <- ggplot(dados, aes(x = altura, y = peso)) +
     y = "Peso (kg)"
   ) +
   theme_estat()
+grafico2
 
 teste_cor <- cor.test(dados$peso, dados$altura, method = "pearson")
 
 
-quadro_altura <- print_quadro_resumo(dados, altura, 
-                                     title = "Medidas resumo da variável Altura (cm)",
-                                     label = "quad:altura")
+quadro_altura <- print_quadro_resumo(
+  data = dados,
+  var_name = altura,
+  title = "Medidas resumo da variável Altura (cm)",
+  label = "quad:quadro_altura"
+)
 
-quadro_peso <- print_quadro_resumo(dados, peso, 
-                                   title = "Medidas resumo da variável Peso (kg)",
-                                   label = "quad:peso")
+quadro_peso <- print_quadro_resumo(
+  data = dados,
+  var_name = peso,
+  title = "Medidas resumo da variável Peso (kg)",
+  label = "quad:quadro_peso"
+)
 
 
 correlacao

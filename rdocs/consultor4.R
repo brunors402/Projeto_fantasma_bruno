@@ -81,25 +81,25 @@ grafico_top3
 grafico_top3 <- ggplot(top3_produtos, aes(x = reorder(NameProduct, Quantidade_Total), 
                                           y = Quantidade_Total, 
                                           fill = NameStore)) +
-  geom_bar(stat = "identity", position = "dodge", width = 0.7) +  # Largura das barras ajustada
+  geom_bar(stat = "identity", position = "dodge", width = 0.7) +  
   labs(
     title = "Top 3 produtos mais vendidos nas Top 3 lojas (1889)",
     subtitle = "Análise da Old Town Road Ltda. — Projeto Fantasma",
     x = "Produto",
     y = "Quantidade vendida"
   ) +
-  theme_estat() +  # Mantém o tema estat
+  theme_estat() +  
   theme(
-    legend.title = element_blank(),  # Remove o título da legenda
-    axis.text.x = element_text(angle = 45, hjust = 1, size = 12),  # Rotaciona os rótulos do eixo X
-    plot.title = element_text(size = 16, face = "bold", hjust = 0.5),  # Título centralizado
-    plot.subtitle = element_text(size = 12, hjust = 0.5)  # Subtítulo centralizado
+    legend.title = element_blank(),  
+    axis.text.x = element_text(angle = 45, hjust = 1, size = 12),  
+    plot.title = element_text(size = 16, face = "bold", hjust = 0.5),  
+    plot.subtitle = element_text(size = 12, hjust = 0.5)  
   )
 
-# Exibe o gráfico
+
 grafico_top3
 
-receita_top3 <- print_quadro_resumo(
+receita-top3 <- print_quadro_resumo(
   data = top3_lojas,
   var_name = Receita_Total,
   title = "Medidas resumo da Receita Total (Top 3 lojas em 1889)",

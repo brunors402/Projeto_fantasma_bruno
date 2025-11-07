@@ -1,11 +1,11 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.10.25)  6 NOV 2025 11:06
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.11.6)  7 NOV 2025 12:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**consultor2.tex
-(./consultor2.tex
-LaTeX2e <2025-06-01> patch level 1
-L3 programming layer <2025-10-09>
+**consultor4.tex
+(./consultor4.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-10-24>
 (./estat/estat.cls
 
 LaTeX Warning: You have requested document class `estat/estat',
@@ -54,7 +54,7 @@ Package: iftex 2024/12/12 v1.0g TeX engine tests
 \Gm@layoutvoffset=\dimen156
 \Gm@dimlist=\toks18
 ) (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2025/06/16 v2.17y AMS math features
+Package: amsmath 2025/07/09 v2.17z AMS math features
 \@mathmargin=\skip51
 For additional information on amsmath, use the `?' option.
 (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -114,8 +114,8 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \multlinegap=\skip52
 \multlinetaggap=\skip53
 \mathdisplay@stack=\toks23
-LaTeX Info: Redefining \[ on input line 2949.
-LaTeX Info: Redefining \] on input line 2950.
+LaTeX Info: Redefining \[ on input line 2950.
+LaTeX Info: Redefining \] on input line 2951.
 ) (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/amsfonts.sty
@@ -146,7 +146,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks31
 \@floatcapt=\box56
 ) (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/multicol.sty
-Package: multicol 2025/05/25 v2.0a multicolumn formatting (FMi)
+Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
 \c@tracingmulticols=\count295
 \mult@box=\box57
 \multicol@leftmargin=\dimen166
@@ -232,7 +232,7 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: xetex.def on input line 106.
 (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-def/xetex.def
-File: xetex.def 2025/09/29 v5.0o Graphics/color driver for xetex
+File: xetex.def 2025/11/01 v5.0p Graphics/color driver for xetex
 ))
 \Gin@req@height=\dimen176
 \Gin@req@width=\dimen177
@@ -243,7 +243,7 @@ Package: anyfontsize 2007/11/22 anyfontsize.sty by pts
 ) (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
 ) (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec.sty (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2025-10-09 L3 programming layer (loader) 
+Package: expl3 2025-10-24 L3 programming layer (loader) 
 (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
 File: l3backend-xetex.def 2025-10-09 L3 backend support: XeTeX
 \g__graphics_track_int=\count307
@@ -270,7 +270,7 @@ Package: fontspec-xetex 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
 \l__fontspec_tmpb_dim=\dimen179
 \l__fontspec_tmpc_dim=\dimen180
 (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2024/12/21 v2.1c Standard LaTeX package
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
 ) (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
 
 Package fontspec Info: 
@@ -443,10 +443,11 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 ) (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/adjustbox/adjustbox.sty
 Package: adjustbox 2025/02/26 v1.3c Adjusting TeX boxes (trim, clip, ...)
 (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xkeyval/xkeyval.sty
-Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+Package: xkeyval 2025/11/04 v2.10 package option processing (HA)
 (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/xkeyval/xkeyval.tex (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks32
 \XKV@tempa@toks=\toks33
+\XKV@tempb@toks=\toks34
 )
 \XKV@depth=\count343
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
@@ -500,7 +501,7 @@ File: x11nam.def 2024/09/29 v3.02 Predefined colors according to Unix/X11 (UK)
 ) (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count344
 \lst@gtempboxa=\box105
-\lst@token=\toks34
+\lst@token=\toks35
 \lst@length=\count345
 \lst@currlwidth=\dimen274
 \lst@column=\count346
@@ -521,6 +522,7 @@ File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
 File: listings.cfg 2024/09/23 1.10c listings configuration
 ))
 Package: listings 2024/09/23 1.10c (Carsten Heinz)
+==> First Aid for listings.sty applied!
 (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 ) (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/listings/lstlang2.sty
@@ -528,7 +530,7 @@ File: lstlang2.sty 2024/09/23 1.10c listings language file
 ) (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/listings/lstlang3.sty
 File: lstlang3.sty 2024/09/23 1.10c listings language file
 ) (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks35
+\pgfutil@everybye=\toks36
 \pgfutil@tempdima=\dimen278
 \pgfutil@tempdimb=\dimen279
 ) (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
@@ -540,10 +542,10 @@ Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
 (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
 (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks36
-\pgfkeys@temptoks=\toks37
+\pgfkeys@pathtoks=\toks37
+\pgfkeys@temptoks=\toks38
 (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
-\pgfkeys@tmptoks=\toks38
+\pgfkeys@tmptoks=\toks39
 ))
 \pgf@x=\dimen280
 \pgf@y=\dimen281
@@ -561,9 +563,9 @@ Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
 \c@pgf@countb=\count353
 \c@pgf@countc=\count354
 \c@pgf@countd=\count355
-\t@pgf@toka=\toks39
-\t@pgf@tokb=\toks40
-\t@pgf@tokc=\toks41
+\t@pgf@toka=\toks40
+\t@pgf@tokb=\toks41
+\t@pgf@tokc=\toks42
 \pgf@sys@id@count=\count356
 (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
@@ -589,9 +591,9 @@ Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
 \pgfmath@dimen=\dimen290
 \pgfmath@count=\count360
 \pgfmath@box=\box108
-\pgfmath@toks=\toks42
-\pgfmath@stack@operand=\toks43
-\pgfmath@stack@operation=\toks44
+\pgfmath@toks=\toks43
+\pgfmath@stack@operand=\toks44
+\pgfmath@stack@operation=\toks45
 ) (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count361
 )) (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
@@ -674,8 +676,8 @@ Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
 Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
 \pgffor@iter=\dimen317
 \pgffor@skip=\dimen318
-\pgffor@stack=\toks45
-\pgffor@toks=\toks46
+\pgffor@stack=\toks46
+\pgffor@toks=\toks47
 )) (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
 (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
@@ -796,11 +798,11 @@ File: pgflibrarypatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )) (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfit.code.tex
 File: tikzlibraryfit.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/array.sty
-Package: array 2025/06/08 v2.6j Tabular extension package (FMi)
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \col@sep=\dimen339
 \ar@mcellbox=\box141
 \extrarowheight=\dimen340
-\NC@list=\toks47
+\NC@list=\toks48
 \extratabsurround=\skip65
 \backup@length=\skip66
 
@@ -1193,7 +1195,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/lmr/bx/n --> TU/Arial(2)/b/n on input line 28.
 (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
-Package: longtable 2024-12-18 v4.23 Multi-page Table package (DPC)
+Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
 \LTleft=\skip68
 \LTright=\skip69
 \LTpre=\skip70
@@ -1209,7 +1211,7 @@ Package: longtable 2024-12-18 v4.23 Multi-page Table package (DPC)
 \LT@rows=\count396
 \c@LT@tables=\count397
 \c@LT@chunks=\count398
-\LT@p@ftn=\toks48
+\LT@p@ftn=\toks49
 ) (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/mdwtools/footnote.sty
 Package: footnote 1997/01/28 1.13 Save footnotes around boxes
 \fn@notes=\box156
@@ -1374,9 +1376,9 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthL=\skip83
 \f@nch@widthC=\skip84
 \f@nch@widthR=\skip85
-\@temptokenb=\toks49
+\@temptokenb=\toks50
 )
-\@float@every@quadro=\toks50
+\@float@every@quadro=\toks51
 \c@quadro=\count401
 (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
@@ -1401,7 +1403,7 @@ Package caption Info: longtable package is loaded.
 (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 ))
-\@float@every@codelisting=\toks51
+\@float@every@codelisting=\toks52
 \c@codelisting=\count404
 (c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
@@ -1416,8 +1418,8 @@ File: bkm-dvipdfm.def 2023-12-10 v1.31 bookmark driver for dvipdfm (HO)
 \BKM@id=\count407
 ))
 Package hyperref Info: Option `colorlinks' set `true' on input line 205.
-No file consultor2.aux.
-\openout1 = `consultor2.aux'.
+No file consultor4.aux.
+\openout1 = `consultor4.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 210.
 LaTeX Font Info:    ... okay on input line 210.
@@ -1716,11 +1718,9 @@ LaTeX Font Info:    Font shape `TU/Arial(3)/b/n' will be
 (Font)              scaled to size 12.0pt on input line 233.
 LaTeX Font Info:    Font shape `TU/Arial(3)/b/n' will be
 (Font)              scaled to size 17.28pt on input line 233.
-No file consultor2.toc.
+No file consultor4.toc.
 \tf@toc=\write4
-\openout4 = `consultor2.toc'.
-
-
+\openout4 = `consultor4.toc'.
 
 File: estat/imagens/estat.png Graphic file (type bmp)
 <estat/imagens/estat.png>
@@ -1737,9 +1737,7 @@ File: estat/imagens/pagina-comum.png Graphic file (type bmp)
 
 ]
 LaTeX Font Info:    Font shape `TU/Arial(3)/m/n' will be
-(Font)              scaled to size 17.28pt on input line 236.
-
-
+(Font)              scaled to size 17.28pt on input line 238.
 File: estat/imagens/estat.png Graphic file (type bmp)
 <estat/imagens/estat.png>
 
@@ -1754,42 +1752,6 @@ File: estat/imagens/pagina-comum.png Graphic file (type bmp)
 [2
 
 ]
-LaTeX Font Info:    Font shape `TU/Arial(3)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 245.
-LaTeX Font Info:    Font shape `TU/Arial(3)/b/n' will be
-(Font)              scaled to size 14.4pt on input line 245.
-File: consultor2_files/figure-pdf/fig-grafico2-1.pdf Graphic file (type pdf)
-<consultor2_files/figure-pdf/fig-grafico2-1.pdf>
-Package hyperref Info: bookmark level for unknown quadro defaults to 0 on input line 280.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 10.10637pt on input line 284.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.21884pt on input line 284.
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 284.
-(c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
-File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 14.43915pt on input line 284.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.10739pt on input line 284.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.21957pt on input line 284.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 14.43622pt on input line 284.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 10.10533pt on input line 284.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.21811pt on input line 284.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 284.
-(c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 284.
-(c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-
 File: estat/imagens/estat.png Graphic file (type bmp)
 <estat/imagens/estat.png>
 
@@ -1804,25 +1766,103 @@ File: estat/imagens/pagina-comum.png Graphic file (type bmp)
 [3
 
 ]
+File: estat/imagens/estat.png Graphic file (type bmp)
+<estat/imagens/estat.png>
 
-! LaTeX Error: Command  1 undefined.
+Package fancyhdr Warning: \headheight is too small (28.0pt): 
+(fancyhdr)                Make it at least 39.23682pt, for example:
+(fancyhdr)                \setlength{\headheight}{39.23682pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-11.23682pt}.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.313     \renewcommand{  \arraystretch}
-                                        {1.20}
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+File: estat/imagens/pagina-comum.png Graphic file (type bmp)
+<estat/imagens/pagina-comum.png>
+[4
+
+]
+File: consultor4_files/figure-pdf/fig-grafico1-1.pdf Graphic file (type pdf)
+<use consultor4_files/figure-pdf/fig-grafico1-1.pdf>
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 10.10637pt on input line 371.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 7.21884pt on input line 371.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 371.
+(c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 14.43915pt on input line 371.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 10.10739pt on input line 371.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 7.21957pt on input line 371.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 14.43622pt on input line 371.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 10.10533pt on input line 371.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 7.21811pt on input line 371.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 371.
+(c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 371.
+(c:/Users/Usuario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+File: estat/imagens/estat.png Graphic file (type bmp)
+<estat/imagens/estat.png>
+
+Package fancyhdr Warning: \headheight is too small (28.0pt): 
+(fancyhdr)                Make it at least 39.23682pt, for example:
+(fancyhdr)                \setlength{\headheight}{39.23682pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-11.23682pt}.
+
+File: estat/imagens/pagina-comum.png Graphic file (type bmp)
+<estat/imagens/pagina-comum.png>
+[5
+
+]
+Overfull \hbox (3054.98322pt too wide) in paragraph at lines 396--396
+[]\TU/lmtt/m/n/12 Observa-se, pela $\ref{fig-grafico1}$, que a receita média anual das lojas apresentou variações moderadas ao longo da década.Nos primeiros anos (1880 a 1883) há uma tendência de estabilidade, seguida por um crescimento gradual até o final do período (1889). Esse comportamento pode estar associado à expansão do comércio regional, aumento da demanda local e melhor desempenho das lojas de maior porte. O padrão observado sugere uma trajetória positiva e consistente, indicando que as operações comerciais da Old Town Road Ltda consolidaram-se nesse intervalo temporal.[] 
+ []
+
+File: consultor4_files/figure-pdf/unnamed-chunk-1-1.pdf Graphic file (type pdf)
+<use consultor4_files/figure-pdf/unnamed-chunk-1-1.pdf>
+
+Overfull \hbox (7.42728pt too wide) in paragraph at lines 440--441
+[][] 
+ []
+
+Package hyperref Info: bookmark level for unknown quadro defaults to 0 on input line 444.
+File: estat/imagens/estat.png Graphic file (type bmp)
+<estat/imagens/estat.png>
+
+Package fancyhdr Warning: \headheight is too small (28.0pt): 
+(fancyhdr)                Make it at least 39.23682pt, for example:
+(fancyhdr)                \setlength{\headheight}{39.23682pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-11.23682pt}.
+
+File: estat/imagens/pagina-comum.png Graphic file (type bmp)
+<estat/imagens/pagina-comum.png>
+[6]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.543 ![](consultor4_
+                     files/figure-pdf/fig-grafico4-1.pdf){#fig-grafico4}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
  
 Here is how much of TeX's memory you used:
- 40423 strings out of 470403
- 867594 string characters out of 5484378
- 1438104 words of memory out of 5000000
- 68149 multiletter control sequences out of 15000+600000
- 631406 words of font info for 92 fonts, out of 8000000 for 9000
+ 40434 strings out of 470194
+ 867933 string characters out of 5476983
+ 1451938 words of memory out of 5000000
+ 68369 multiletter control sequences out of 15000+600000
+ 631390 words of font info for 90 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 99i,12n,122p,547b,939s stack positions out of 10000i,1000n,20000p,200000b,200000s
-Output written on consultor2.pdf (3 pages).
+ 99i,13n,122p,623b,990s stack positions out of 10000i,1000n,20000p,200000b,200000s
+Output written on consultor4.pdf (6 pages).

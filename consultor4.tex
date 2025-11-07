@@ -1,0 +1,738 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  brazilian,
+]{estat/estat}
+\usepackage{xcolor}
+\usepackage[left=3cm,right=2cm,top=3cm,bottom=2cm]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{Arial}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\ifPDFTeX
+\else
+\babelfont{rm}[]{Arial}
+\fi
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+\authors{%
+    Estatiano 1 \\
+    Estatiano 2\\
+    Estatiano 3\\
+}
+
+% escreva o nome do cliente aqui
+% se for mais de um separe por \\
+\client{%
+    ESTAT
+}
+% Baixando pacotes
+\RequirePackage{fancyhdr}
+\RequirePackage{graphicx}
+
+\setlength\headheight{28pt}  
+
+\setlength{\parindent}{15pt} % Adiciona indentação nos parágrafos
+\setlength{\parskip}{0pt} % Adiciona 0 espaço entro os parágrafos
+
+\let\oldsection\section
+\renewcommand\section{\clearpage\oldsection}
+\makeatletter
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{plain}
+\@ifundefined{c@chapter}{\newfloat{quadro}{h}{loquad}}{\newfloat{quadro}{h}{loquad}[chapter]}
+\floatname{quadro}{Quadro}
+\floatstyle{plaintop}
+\restylefloat{quadro}
+\newcommand*\listofquadros{\listof{quadro}{List of Testes}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Índice}
+\else
+  \newcommand\contentsname{Índice}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{Lista de Figuras}
+\else
+  \newcommand\listfigurename{Lista de Figuras}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{Lista de Tabelas}
+\else
+  \newcommand\listtablename{Lista de Tabelas}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figura}
+\else
+  \newcommand\figurename{Figura}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Tabela}
+\else
+  \newcommand\tablename{Tabela}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listagem}
+\newcommand*\listoflistings{\listof{codelisting}{Lista de Listagens}}
+\captionsetup{labelsep=colon}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdflang={pt-br},
+  colorlinks=true,
+  linkcolor={black},
+  filecolor={black},
+  citecolor={black},
+  urlcolor={black},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\author{}
+\date{}
+\begin{document}
+
+% Limpando tudo
+\fancyhf{} 
+
+% Ajustes do header
+\fancyhead[L]{} % limpando o lado esquerdo
+\fancyhead[R]{\includegraphics[width=0.20\textwidth]{estat/imagens/estat.png}} % adicionando logo no canto direito
+\renewcommand{\headrulewidth}{0pt}   % sem linha embaixo da logo
+
+% Ajustes de fim de página
+\fancyfoot[R]{\textcolor{white}{\thepage}} % Número em branco no canto direito
+
+% Aplicando o estilo que acabamos de criar
+\pagestyle{fancy} 
+
+
+\labelformat{quadro}{\textbf{#1}}
+
+\renewcommand*\contentsname{Sumário}
+{
+\hypersetup{linkcolor=}
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+
+\section{Caso `receita' não tenha sido criado, gera um dummy só para
+evitar
+erro}\label{caso-receita-nuxe3o-tenha-sido-criado-gera-um-dummy-suxf3-para-evitar-erro}
+
+if (!exists(``receita'')) \{ receita \textless- data.frame( Ano =
+1880:1889, Receita\_Media = rep(0, 10) ) \}
+
+if (!exists(``grafico1'')) \{ grafico1 \textless- ggplot(receita, aes(x
+= Ano, y = Receita\_Media)) + geom\_blank() + labs(title = ``Gráfico não
+disponível (erro de carregamento)'', x = ``Ano'', y = ``Receita Média
+(R\$)'') \}
+
+if (!exists(``grafico2'')) \{ grafico2 \textless- ggplot() +
+geom\_blank() + labs(title = ``Gráfico não disponível (erro de
+carregamento)'') \}
+
+if (!exists(``grafico4'')) \{ grafico4 \textless- ggplot() +
+geom\_blank() + labs(title = ``Gráfico não disponível (erro de
+carregamento)'') \}
+
+if (!exists(``grafico\_top3'')) \{ grafico\_top3 \textless- ggplot() +
+geom\_blank() + labs(title = ``Gráfico não disponível (erro de
+carregamento)'') \}
+
+O objetivo desta análise é identificar os três produtos mais vendidos
+nas três lojas com maior receita no ano de 1889, permitindo compreender
+o comportamento de consumo e o desempenho das principais unidades da Old
+Town Road Ltda.
+
+As variáveis utilizadas foram:
+
+StoreID / NameStore: identificação das lojas.
+
+NameProduct: nome dos produtos comercializados.
+
+Quantity: quantidade vendida.
+
+UnityPrice: preço unitário do produto em dólares, convertido para reais
+(cotação de 1 USD = 5,31 BRL).
+
+As seguintes transformações foram aplicadas:
+
+Conversão monetária de USD para BRL.
+
+Filtragem das vendas somente para o ano de 1889.
+
+Cálculo da receita total por loja, seleção das Top 3 lojas e
+determinação dos Top 3 produtos mais vendidos em cada uma delas.
+
+A visualização dos resultados foi feita por meio de um gráfico de barras
+verticais agrupadas.
+
+\#--- \#title: ``Modelo Projeto - Quarto''
+
+\#output-file: titulo do projeto \#---
+
+\section{Introdução}\label{introduuxe7uxe3o}
+
+O presente relatório tem como objetivo apresentar as principais análises
+estatísticas realizadas para a empresa Old Town Road Ltda, sob
+consultoria da ESTAT Consultoria Júnior. O projeto tem como finalidade
+compreender o comportamento das vendas e do perfil dos clientes no
+período de 1880 a 1889, com base nos dados fornecidos pela empresa.
+
+Foram conduzidas quatro análises principais:
+
+Receita média das lojas (1880--1889);
+
+Relação entre peso e altura dos clientes;
+
+Idade dos clientes de Âmbar Seco por loja;
+
+Top 3 produtos mais vendidos nas 3 lojas com maior receita em 1889.
+
+As análises foram realizadas no software R, utilizando o pacote
+tidyverse e o padrão de formatação gráfica da ESTAT, definido pela
+função theme\_estat(). Todas as variáveis numéricas foram devidamente
+tratadas e, quando necessário, transformadas para unidades comparáveis
+(como conversão de dólares para reais).
+
+\section{Referencial Teórico}\label{referencial-teuxf3rico}
+
+As análises baseiam-se em conceitos clássicos de estatística descritiva
+(média, mediana, quartis, desvio-padrão), análise bivariada (correlação
+de Pearson e ajuste linear) e visualização exploratória de dados. A
+interpretação das medidas descritivas e das visualizações visa não
+apenas descrever os dados, mas oferecer insights acionáveis --- por
+exemplo, identificar produtos de alto giro, perfis demográficos
+relevantes e possíveis diretrizes para política de estoques e promoções.
+
+\section{Análises}\label{anuxe1lises}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Receita média das lojas (1880--1889) O objetivo desta análise é
+  avaliar a evolução da receita média das lojas entre os anos de 1880 e
+  1889. Foram consideradas todas as lojas registradas no banco de dados
+  de vendas e calculada a receita total anual, convertida de dólares
+  (USD) para reais (BRL), com cotação de 1 USD = R\$5,31.
+\end{enumerate}
+
+As variáveis analisadas são:
+
+Ano (extraído da data da venda),
+
+Receita média por loja (em reais).
+
+A visualização escolhida foi um gráfico de linha, por ser ideal para
+acompanhar a evolução temporal da receita média.
+
+O gráfico a seguir apresenta a receita média anual (em R\$) das lojas no
+período analisado.
+
+\begin{figure}[H]
+
+\caption{\label{fig-grafico1}Evolução da Receita Média das Lojas
+(1880--1889)}
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{consultor4_files/figure-pdf/fig-grafico1-1.pdf}}
+
+}
+
+\end{figure}%
+
+\begin{table}[H]
+
+\caption{\label{tbl-receita_media_ano}Medidas resumo da Receita Média
+das Lojas (1880--1889)}
+
+\centering{
+
+  \begin{tabular} { | l |
+      S[table-format = 8.2]
+    |}
+  \hline
+  \textbf{Estatística} & \textbf{Valor} \\
+  \hline
+  Média & 1135,15 \\
+  Desvio Padrão & 33,31 \\
+  Variância & 1109,79 \\
+  Mínimo & 1099,19 \\
+  1º Quartil & 1111,75 \\
+  Mediana & 1120,97 \\
+  3º Quartil & 1162,13 \\
+  Máximo & 1196,21 \\
+  \hline
+  \end{tabular}
+  
+  
+
+}
+
+\end{table}%
+
+\begin{verbatim}
+Observa-se, pela $\ref{fig-grafico1}$, que a receita média anual das lojas apresentou variações moderadas ao longo da década.Nos primeiros anos (1880 a 1883) há uma tendência de estabilidade, seguida por um crescimento gradual até o final do período (1889). Esse comportamento pode estar associado à expansão do comércio regional, aumento da demanda local e melhor desempenho das lojas de maior porte. O padrão observado sugere uma trajetória positiva e consistente, indicando que as operações comerciais da Old Town Road Ltda consolidaram-se nesse intervalo temporal.
+\end{verbatim}
+
+A análise evidencia que a receita média anual das lojas aumentou
+progressivamente entre 1880 e 1889, refletindo um cenário positivo de
+expansão de vendas.
+
+O {[}**Quadro** @quad{]} mostra que a média da receita das lojas entre
+1880 e 1889 foi de aproximadamente R\$ 1135,15, com desvio-padrão de R\$
+33,31, indicando uma variação moderada entre os anos. A diferença entre
+o mínimo e o máximo reflete períodos de baixa e alta sazonalidade,
+possivelmente influenciados por flutuações na demanda ou eventos
+econômicos locais. A mediana próxima da média sugere uma distribuição
+simétrica, sem grandes distorções. Essas medidas complementam o gráfico
+anterior ao quantificar a tendência de crescimento gradual e consistente
+da receita média ao longo da década.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Relação entre Peso e Altura dos Clientes Esta análise tem como
+  objetivo verificar a relação entre as variáveis altura (cm) e peso
+  (kg) dos clientes. Os dados foram extraídos da aba infos\_clientes do
+  arquivo relatorio\_old\_town\_road.xlsx. Durante o tratamento, foram
+  realizadas as seguintes transformações:
+\end{enumerate}
+
+\begin{verbatim}
+-Conversão de peso de libras para quilogramas (1 lb = 0.453592 kg);
+\end{verbatim}
+
+-Conversão de altura de decímetros para centímetros (1 dm = 10 cm);
+
+-Remoção de valores ausentes (NA) para garantir consistência nas
+análises.
+
+O gráfico a seguir ilustra a dispersão entre as duas variáveis, bem como
+a linha de tendência linear ajustada.
+
+O \$ref(fig-grafico2) apresenta a dispersão dos clientes em função de
+suas alturas e pesos, com uma linha de regressão linear (tracejada)
+representando a tendência central.
+
+\pandocbounded{\includegraphics[keepaspectratio]{consultor4_files/figure-pdf/unnamed-chunk-1-1.pdf}}
+
+\begin{quadro}[H]
+
+\caption{\label{quad-quadro_altura}Medidas resumo da altura}
+
+\centering{
+
+\begin{verbatim}
+```{=latex}
+\begin{tabular} { | l |
+    S[table-format = 8.2]
+  |}
+\hline
+\textbf{Estatística} & \textbf{Valor} \\
+\hline
+Média & 171,48 \\
+Desvio Padrão & 9,87 \\
+Variância & 97,38 \\
+Mínimo & 150 \\
+1º Quartil & 164,8 \\
+Mediana & 171,75 \\
+3º Quartil & 178 \\
+Máximo & 200 \\
+\hline
+\end{tabular}
+
+
+```
+\end{verbatim}
+
+}
+
+\end{quadro}%
+
+\begin{quadro}[H]
+
+\caption{\label{quad-quadro_peso}Medidas resumo da idade\_cliente}
+
+\centering{
+
+        \begin{table}[H]
+        \setlength{\tabcolsep}{9pt}
+        \renewcommand{\arraystretch}{1.20}
+        \caption{Medidas resumo da variável Peso (kg)}
+        \centering
+        \begin{adjustbox}{max width=\textwidth}
+        \begin{tabular} { | l | S[table-format = 8.2] |}
+        \hline
+        \textbf{Estatística} & \textbf{Valor} \\
+        \hline
+        Média & 75,19 \\
+        Desvio Padrão & 11,92 \\
+        Variância & 142 \\
+        Mínimo & 45 \\
+        1º Quartil & 66,9 \\
+        Mediana & 75,3 \\
+        3º Quartil & 83,2 \\
+        Máximo & 119,3 \\
+        \hline
+        \end{tabular}
+        \end{adjustbox}
+        \end{table}
+        ```
+Medidas resumo do peso
+:::
+De acordo com o @ref(fig-grafico2), observa-se uma correlação positiva moderada entre o peso e a altura dos clientes, indicando que à medida que a altura aumenta, o peso tende a aumentar também.
+
+Com base nos resultados obtidos, conclui-se que há relação linear positiva significativa entre o peso e a altura dos clientes.
+Em termos práticos, clientes mais altos tendem a apresentar pesos maiores, o que é consistente com o comportamento antropométrico esperado.
+Essas informações podem auxiliar o cliente Old Town Road Ltda. na segmentação de mercado e personalização de produtos, considerando perfis físicos distintos.
+
+
+Análise Descritiva — Altura
+
+O [**Quadro** @quad] indica uma média de aproximadamente 171,48 cm,com um desvio-padrão de 9,87 cm, o que sugere baixa dispersão dos valores em torno da média. A diferença entre o mínimo e omáximo é pequena, reforçando a homogeneidade da amostra quanto à estatura.Os quartis revelam que metade dosclientes possui altura entre 164,8 cm e 178 cm,mostrando uma tendência central bem definida.Em conjunto com o gráfico de dispersão, essa análise confirma que indivíduos mais altos tendem a apresentarmaiores pesos, caracterizando uma relação linear positiva significativa entre as variáveis.
+
+
+Análise Descritiva — Peso
+
+O [**Quadro** @quad] mostra uma média de aproximadamente 75,19 kg e um desvio-padrão de 11,92 kg, indicando moderada variação entre os indivíduos.
+A amplitude entre o mínimo e o máximo revela a existência de clientes com perfis físicos distintos,
+desde indivíduos mais leves até outros com peso mais elevado.
+Os quartis demonstram que 50% dos clientes possuem peso entre 66,9 kg e 83,2 kg,
+caracterizando uma distribuição relativamente equilibrada, sem grandes assimetrias.
+Esses resultados estão de acordo com o gráfico de dispersão, que evidencia uma correlação positiva entre peso e altura.
+        
+ 3. Idade dos Clientes de Âmbar Seco por Loja
+        
+O objetivo desta análise é compreender o perfil etário dos clientes da cidade de Âmbar Seco, considerando as diferentes lojas que atuam na região.
+        As variáveis envolvidas são:
+          
+ Age — idade dos clientes (em anos);
+ NameStore — nome da loja;
+NameCity — nome da cidade (filtrada para “Âmbar Seco”).
+        
+Os dados foram integrados a partir das planilhas relatorio\_vendas, infos\_lojas, infos\_clientes e infos\_cidades.
+As idades foram mantidas em sua escala original (anos completos) e agregadas por loja.
+A visualização escolhida foi o boxplot, pois permite observar a dispersão, a mediana e os possíveis valores extremos da idade dos clientes em cada loja.
+        
+
+::: {.cell}
+::: {.cell-output-display}
+![](consultor4_files/figure-pdf/fig-grafico4-1.pdf){#fig-grafico4}
+:::
+:::
+
+Os dados foram integrados a partir das planilhas `relatorio_vendas`, `infos_lojas`, `infos_clientes` e `infos_cidades`.
+As idades foram mantidas em sua escala original (anos completos) e agregadas por loja.
+A visualização escolhida foi o boxplot, pois permite observar a dispersão, a mediana e os possíveis valores extremos da idade dos clientes em cada loja.
+
+::: {#quad-idade_cliente layout-align="center" quad-pos="H"}
+```{=latex}
+\begin{tabular} { | l |
+    S[table-format = 2.2]
+  |}
+\hline
+\textbf{Estatística} & \textbf{Valor} \\
+\hline
+Média & 36,2 \\
+Desvio Padrão & 10,15 \\
+Variância & 103,11 \\
+Mínimo & 15 \\
+1º Quartil & 30 \\
+Mediana & 35 \\
+3º Quartil & 42 \\
+Máximo & 80 \\
+\hline
+\end{tabular}
+
+}
+
+\end{quadro}%
+
+A partir da Figura \ref{fig-grafico4}, observa-se que as lojas da cidade
+de Âmbar Seco apresentam diferenças relevantes no perfil etário de seus
+clientes. Em todas as lojas, a mediana de idade se concentra
+principalmente entre 30 e 40 anos, indicando um público adulto
+consolidado economicamente --- algo coerente com um comércio de produtos
+do faroeste.
+
+A análise indica que o público das lojas de Âmbar Seco é
+predominantemente composto por adultos jovens, com pouca variação entre
+os estabelecimentos. Essas informações podem orientar estratégias de
+marketing e oferta de produtos mais adequados ao perfil de clientes
+dessa cidade.
+
+O {[}**Quadro** @quad{]}da idade dos clientes demonstra que as idades
+médias variam entre 30 e 42 ano entre as lojas da cidade de Âmbar Seco,
+com desvio-padrão moderado, sugerindo uma clientela heterogênea. Os
+valores mínimo e máximo indicam presença de jovens e adultos mais
+velhos, reforçando que as lojas atendem públicos de diferentes faixas
+etárias. A mediana próxima à média aponta uma distribuição relativamente
+simétrica, sem forte concentração em extremos. Essas medidas reforçam as
+observações do boxplot, que apontam distribuições equilibradas de idade
+entre as lojas.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Top 3 Produtos Mais Vendidos nas Top 3 Lojas
+\end{enumerate}
+
+O objetivo desta análise é identificar os três produtos mais vendidos
+nas três lojas com maior receita no ano de 1889, permitindo compreender
+o comportamento de consumo e o desempenho das principais unidades da Old
+Town Road Ltda.
+
+As variáveis utilizadas foram:
+
+StoreID / NameStore: identificação das lojas.
+
+NameProduct: nome dos produtos comercializados.
+
+Quantity: quantidade vendida.
+
+UnityPrice: preço unitário do produto em dólares, convertido para reais
+(cotação de 1 USD = 5,31 BRL).
+
+As seguintes transformações foram aplicadas:
+
+Conversão monetária de USD para BRL.
+
+Filtragem das vendas somente para o ano de 1889.
+
+Cálculo da receita total por loja, seleção das Top 3 lojas e
+determinação dos Top 3 produtos mais vendidos em cada uma delas.
+
+A visualização dos resultados foi feita por meio de um gráfico de barras
+verticais agrupadas.
+
+\pandocbounded{\includegraphics[keepaspectratio]{consultor4_files/figure-pdf/unnamed-chunk-2-1.pdf}}
+
+\begin{quadro}[H]
+
+\caption{\label{quad-receita_top3}Medidas resumo da Receita Total (Top 3
+lojas em 1889)}
+
+\centering{
+
+            \begin{tabular} { | l |
+                S[table-format = 8.2]
+              |}
+            \hline
+            \textbf{Estatística} & \textbf{Valor} \\
+            \hline
+            Média & 191780.6 \\
+            Desvio Padrão & 8753.06 \\
+            Variância & 76616083 \\
+            Mínimo & 181689.1 \\
+            1º Quartil & 189014.7 \\
+            Mediana & 196340.3 \\
+            3º Quartil & 196826.4 \\
+            Máximo & 197312.5 \\
+            \hline
+            \end{tabular}
+            
+            
+
+}
+
+\end{quadro}%
+
+De acordo com a \(\ref{fig-grafico\_top3}\) , observa-se que as três
+lojas com maior receita em 1889 apresentaram padrões distintos de
+vendas, mas todas possuem produtos específicos com destaque expressivo
+de demanda. Entre as lojas analisadas, nota-se que:
+
+Uma ou duas lojas concentram grande volume em um único produto,
+indicando dependência comercial desse item;
+
+Outras apresentam vendas mais equilibradas, o que pode sugerir maior
+diversificação no portfólio;
+
+Em termos gerais, há uma concentração nas categorias mais vendidas, o
+que pode orientar estratégias de estoque e precificação.
+
+O {[}**Quadro** @quad{]} mostra que as receitas variam
+significativamente entre as lojas líderes, reforçando que o desempenho
+em vendas não depende apenas do volume de produtos, mas também do preço
+médio dos itens e da estrutura de vendas.
+
+Esta análise evidencia os principais produtos responsáveis pelo
+faturamento das lojas mais rentáveis da Old Town Road Ltda. no ano de
+1889. As informações obtidas podem subsidiar decisões estratégicas
+relacionadas à gestão de estoque, planejamento de vendas e foco em
+produtos de maior retorno financeiro. A abordagem segue o padrão da
+ESTAT, com gráfico institucional e quadro resumo de medidas descritivas.
+
+\section{Conclusões}\label{conclusuxf5es}
+
+Tendência positiva na receita média (1880--1889): o padrão de
+crescimento observado indica que a Old Town Road Ltda. experimentou
+melhoria de desempenho durante a década analisada. Recomenda-se
+investigar causas específicas dos anos com maior crescimento (ex.:
+introdução de produtos, campanhas promocionais, expansão de lojas).
+
+Perfil físico dos clientes consistente: a correlação positiva entre
+altura e peso, com significância estatística, sugere padrões
+antropométricos esperados, informação útil para categorias de produto
+sensíveis a medidas corporais (vestuário).
+
+Segmentação etária local: em Âmbar Seco, a clientela tende a se
+concentrar em adultos jovens (25--40 anos) ideal para direcionar
+campanhas regionais e mix de produtos.
+
+Produtos líderes concentram receita: em 1889, poucas SKUs foram
+responsáveis por grande parte do volume nas lojas líderes. A
+recomendação operacional imediata é reforçar estoque e promoções desses
+itens e avaliar margens para priorização em negociações e sortimento.
+
+Recomendações práticas e próximos passos:
+
+Realizar uma análise de margem por produto (preço × custo) para
+identificar os produtos com maior rentabilidade, não apenas volume;
+
+Implementar monitoramento contínuo das top-SKUs por loja e por período
+(dashboards no Power BI conforme exigência do projeto);
+
+Desenvolver campanhas segmentadas por faixa etária em municípios-chave
+(ex.: Âmbar Seco);
+
+Investigar fatores externos (sazonalidade, eventos) que expliquem picos
+observados na receita.
+
+Anexos / Observações técnicas
+
+Todos os gráficos foram produzidos com ggplot2 seguindo theme\_estat()
+(paleta e tipografia institucional).
+
+Os quadros resumo foram gerados com print\_quadro\_resumo() (formatação
+LaTeX compatível com o template de relatório).
+
+
+
+
+\end{document}

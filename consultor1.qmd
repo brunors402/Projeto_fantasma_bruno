@@ -29,7 +29,7 @@ grafico1
 
 
 ```
-::: {#tbl-receita_media layout-align="center" tbl-pos="H"}
+::: {#tbl-receita_media_ano layout-align="center" tbl-pos="H"}
 ```{=latex}
 \begin{tabular} { | l |
 			S[table-format = 8.2]
@@ -56,7 +56,7 @@ Observa-se, pela $\ref{fig-grafico1}$, que a receita média anual das lojas apre
 
 A análise evidencia que a receita média anual das lojas aumentou progressivamente entre 1880 e 1889, refletindo um cenário positivo de expansão de vendas.
 
-O [**Quadro** @quad-receita_media] mostra que a média da receita das lojas entre 1880 e 1889 foi de aproximadamente R$ 1135,15, com desvio-padrão de R$ 33,31, indicando uma variação moderada entre os anos.
+O [**Quadro** @quad-receita_media_ano]mostra que a média da receita das lojas entre 1880 e 1889 foi de aproximadamente R$ 1135,15, com desvio-padrão de R$ 33,31, indicando uma variação moderada entre os anos.
 A diferença entre o mínimo e o máximo reflete períodos de baixa e alta sazonalidade, possivelmente influenciados por flutuações na demanda ou eventos econômicos locais.
 A mediana próxima da média sugere uma distribuição simétrica, sem grandes distorções.
 Essas medidas complementam o gráfico anterior ao quantificar a tendência de crescimento gradual e consistente da receita média ao longo da década.
